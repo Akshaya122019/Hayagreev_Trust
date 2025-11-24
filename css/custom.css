@@ -1,0 +1,379 @@
+.achievements-container {
+  padding: 50px 30px;
+}
+
+/* Add flexbox to row to make cards equal height */
+.achievements-container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Make columns stretch to full height */
+.achievements-container .row>[class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-card {
+  background: #fff;
+  border: 2px solid #f8f9fa;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  /* Make card fill the parent height */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #7db907, #3A5F0B);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+  border-color: #3A5F0B;
+}
+
+.achievement-card:hover::before {
+  transform: scaleY(1);
+}
+
+.achievement-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #7db907, #3A5F0B);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(135, 221, 127, 0.452);
+  transition: all 0.3s ease;
+  /* Prevent icon from growing */
+  flex-shrink: 0;
+}
+
+.achievement-card:hover .achievement-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.achievement-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.achievement-content {
+  /* Allow content to grow and fill remaining space */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-content h4 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.achievement-content p {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  /* Allow paragraph to grow if needed */
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .achievement-card {
+    padding: 25px;
+  }
+
+  /* Reset flex on mobile if you want cards to stack naturally */
+  .achievements-container .row {
+    display: block;
+  }
+}
+
+/* SECOND PART */
+
+.content-section {
+  padding: 50px 40px;
+  background: linear-gradient(to bottom, #ffffff 0%, #faf8f3 100%);
+}
+
+.recognition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.recognition-card {
+  background: white;
+  border: 3px solid #7db907;
+  border-radius: 20px;
+  padding: 40px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.recognition-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle,
+      rgba(212, 175, 55, 0.1) 0%,
+      transparent 70%);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+}
+
+.recognition-card:hover {
+  transform: translateY(-10px);
+  border-color: #7db907;
+  box-shadow: 0 20px 60px rgba(179, 255, 28, 0.3);
+}
+
+.recognition-card:hover::before {
+  top: -25%;
+  left: -25%;
+}
+
+.card-icon {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #b1ff14, #7db907);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.recognition-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.card-icon i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.card-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.decorative-divider {
+  text-align: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.decorative-divider::before,
+.decorative-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(to right,
+      transparent,
+      #d4af37,
+      transparent);
+}
+
+.decorative-divider::before {
+  left: 0;
+}
+
+.decorative-divider::after {
+  right: 0;
+}
+
+.decorative-divider i {
+  font-size: 1.5rem;
+  color: #d4af37;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+@media (max-width: 768px) {
+  .header-section {
+    padding: 40px 20px;
+  }
+
+  .header-section h2 {
+    font-size: 2rem;
+  }
+
+  .content-section {
+    padding: 30px 20px;
+  }
+
+  .recognition-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* // last section */
+.temple-page-wrapper {
+  min-height: 100vh;
+  padding: 60px 0;
+}
+
+.temple-section-card {
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.temple-section-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #b1ff14, #7db907, rgb(10, 209, 60));
+}
+
+.temple-title-main {
+  color: #2d3436;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.temple-title-main::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #b1ff14, #7db907);
+  border-radius: 2px;
+}
+
+.temple-list-item {
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  border-left: 4px solid #b1ff14;
+  transition: all 0.3s ease;
+}
+
+.temple-list-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.temple-donation-item {
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 15px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.temple-donation-item:hover {
+  border-color: #7db907;
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.2);
+}
+
+.temple-icon-badge {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #b1ff14, #7db907);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+.temple-cta-box {
+  background: linear-gradient(135deg, #3f5c06 0%, #5b8606 100%);
+  border-radius: 25px;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 20px 40px rgba(118, 75, 162, 0.3);
+}
+
+.temple-cta-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.temple-donate-button {
+  background: white;
+  color: #7db907;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 15px 50px;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.temple-donate-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.temple-reassurance-box {
+  background: #fff3cd;
+  border-left: 5px solid #ffc107;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
