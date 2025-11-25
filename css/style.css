@@ -245,7 +245,7 @@ body {
 
 @media (max-width: 768px) {
     #heroCarousel {
-        height: 950px;
+        height: 990px;
         /* Dynamic viewport height for mobile browsers */
     }
     .carousel-heading h2 {
@@ -255,7 +255,7 @@ body {
 
 @media (max-width: 576px) {
     #heroCarousel {
-        height: 500px;
+        height: 590px;
     }
 
     .carousel-heading h2 {
