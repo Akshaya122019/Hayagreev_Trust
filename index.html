@@ -82,59 +82,46 @@
     </nav>
 
     <!-- Hero banner -->
-   <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    <!-- CAROUSEL -->
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
         <div class="carousel-inner">
-            <!-- Slide 1 -->
             <div class="carousel-item active">
-                <div class="carousel-image" style="background-image: url('images/car-food.png');">
-                </div>
-                <div class="carousel-caption-custom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 text-center">
-                                <h1 class="hero-title">Hayagreev – Charity Organisation Serving People, Children & Young Couples</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <img src="images/car-food.png" class="d-block carousel-bg" alt="slide 1">
             </div>
-
-            <!-- Slide 2 -->
             <div class="carousel-item">
-                <div class="carousel-image" style="background-image: url('images/car-edu.png');">
-                </div>
-                <div class="carousel-caption-custom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 text-center">
-                                <h1 class="hero-title">Hayagreev – Charity Organisation Serving People, Children & Young Couples</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <img src="images/car-edu.png" class="d-block carousel-bg" alt="slide 2">
             </div>
-
-            <!-- Slide 3 -->
             <div class="carousel-item">
-                <div class="carousel-image" style="background-image: url('images/car-mrg.jpg');">
-                </div>
-                <div class="carousel-caption-custom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 text-center">
-                                <h1 class="hero-title">Hayagreev – Charity Organisation Serving People, Children & Young Couples</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <img src="images/car-mrg.jpg" class="d-block carousel-bg" alt="slide 3">
             </div>
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <!-- Heading + Overlay -->
+        <div class="carousel-heading overlay-dark">
+            <div class="heading-content">
+                <h1 class="text-white fw-bold mb-2 hero-title">Hayagreev – Charity Organisation Serving People, Children & Young Couples</h1>
+                <!-- Example CTA -->
+                <!-- <a href="#" class="btn btn-primary mt-3">Call to action</a> -->
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
+            aria-label="Previous">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
+            aria-label="Next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -388,7 +375,8 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold mb-2">Online Payment / Bank Transfer</h6>
-                                    <p class="mb-0">Safe and easy contributions using credit/debit cards or net banking.</p>
+                                    <p class="mb-0">Safe and easy contributions using credit/debit cards or net banking.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -400,7 +388,8 @@
                                 </div>
                                 <div>
                                     <h6 class="fw-bold mb-2">UPI / QR Code</h6>
-                                    <p class="mb-0">Donate instantly using Google Pay, PhonePe, Paytm, and other UPI-enabled apps.</p>
+                                    <p class="mb-0">Donate instantly using Google Pay, PhonePe, Paytm, and other
+                                        UPI-enabled apps.</p>
                                 </div>
                             </div>
                         </div>
@@ -424,16 +413,20 @@
     </div>
 
     <!-- Make diff -->
-      <section class="annadhanam">
+    <section class="annadhanam">
         <div class="container">
             <div class="text-center">
                 <h2 class="my-4 fw-bold">Ways to Make a Difference</h2>
             </div>
-            <p class="custom-line-height text-muted"> Sponsor daily meals via the Annadhanam programs. Support students with essential educational resources. Help poor couples celebrate sacred temple weddings. Spread the word about our public charitable trust.</p>
+            <p class="custom-line-height text-muted"> Sponsor daily meals via the Annadhanam programs. Support students
+                with essential educational resources. Help poor couples celebrate sacred temple weddings. Spread the
+                word about our public charitable trust.</p>
             <div class="text-center">
-                <h5 class="custom-line-height fw-bold" style="color: #3f5c06 ;"><i>Every donation, big or small, feeds a family, educates a child, and blesses a life. Join Hayagreev today and be the reason someone smiles, learns, and celebrates.</i></h5>
+                <h5 class="custom-line-height fw-bold" style="color: #3f5c06 ;"><i>Every donation, big or small, feeds a
+                        family, educates a child, and blesses a life. Join Hayagreev today and be the reason someone
+                        smiles, learns, and celebrates.</i></h5>
             </div>
-            
+
         </div>
     </section>
 
@@ -598,6 +591,28 @@
                     }
                 });
             });
+        });
+    </script>
+      <script>
+        // Enhanced Carousel Controls
+        const carouselElement = document.getElementById('heroCarousel');
+        const carousel = new bootstrap.Carousel(carouselElement, {
+            interval: 4000,
+            ride: 'carousel',
+            pause: 'hover',
+            wrap: true
+        });
+        
+        // Auto-resume after manual navigation
+        carouselElement.addEventListener('slid.bs.carousel', function () {
+            carousel.cycle();
+        });
+        
+        // Prevent layout issues on mobile orientation change
+        window.addEventListener('orientationchange', function() {
+            setTimeout(function() {
+                carousel.cycle();
+            }, 100);
         });
     </script>
     <script>
