@@ -95,20 +95,29 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/car-food.png" class="d-block carousel-bg" alt="slide 1">
+                <img src="images/car-food.png" class="d-block carousel-bg d-none d-md-block" alt="slide 1">
+                <!-- Mobile image -->
+                <img src="images/car-food-mo.png" class="d-block carousel-bg d-md-none" alt="slide 1">
             </div>
             <div class="carousel-item">
-                <img src="images/car-edu.png" class="d-block carousel-bg" alt="slide 2">
+                <!-- Desktop image -->
+                <img src="images/car-edu.png" class="d-block carousel-bg d-none d-md-block" alt="slide 2">
+                <!-- Mobile image -->
+                <img src="images/car-edu-mo.png" class="d-block carousel-bg d-md-none" alt="slide 2">
             </div>
             <div class="carousel-item">
-                <img src="images/car-mrg.jpg" class="d-block carousel-bg" alt="slide 3">
+                <!-- Desktop image -->
+                <img src="images/car-mrg.jpg" class="d-block carousel-bg d-none d-md-block" alt="slide 3">
+                <!-- Mobile image -->
+                <img src="images/car-mrg-mo.jpg" class="d-block carousel-bg d-md-none" alt="slide 3">
             </div>
         </div>
 
         <!-- Heading + Overlay -->
         <div class="carousel-heading overlay-dark">
             <div class="heading-content">
-                <h1 class="text-white fw-bold mb-2 hero-title">Hayagreev – Charity Organisation Serving People, Children & Young Couples</h1>
+                <h1 class="text-white fw-bold mb-2 hero-title">Hayagreev – Charity Organisation Serving People, Children
+                    & Young Couples</h1>
                 <!-- Example CTA -->
                 <!-- <a href="#" class="btn btn-primary mt-3">Call to action</a> -->
             </div>
@@ -593,7 +602,7 @@
             });
         });
     </script>
-      <script>
+    <script>
         // Enhanced Carousel Controls
         const carouselElement = document.getElementById('heroCarousel');
         const carousel = new bootstrap.Carousel(carouselElement, {
@@ -602,15 +611,15 @@
             pause: 'hover',
             wrap: true
         });
-        
+
         // Auto-resume after manual navigation
         carouselElement.addEventListener('slid.bs.carousel', function () {
             carousel.cycle();
         });
-        
+
         // Prevent layout issues on mobile orientation change
-        window.addEventListener('orientationchange', function() {
-            setTimeout(function() {
+        window.addEventListener('orientationchange', function () {
+            setTimeout(function () {
                 carousel.cycle();
             }, 100);
         });

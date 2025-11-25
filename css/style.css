@@ -245,18 +245,21 @@ body {
 
 @media (max-width: 768px) {
     #heroCarousel {
-        height: 100vh;
-        min-height: 100vh;
-        height: 100dvh;
+        height: 950px;
         /* Dynamic viewport height for mobile browsers */
+    }
+    .carousel-heading h2 {
+        font-size: 1.4rem;
     }
 }
 
 @media (max-width: 576px) {
     #heroCarousel {
-        height: 100vh;
-        min-height: 100vh;
-        height: 100dvh;
+        height: 500px;
+    }
+
+    .carousel-heading h2 {
+        font-size: 1.2rem;
     }
 }
 
@@ -275,8 +278,8 @@ body {
 
 @media (max-width: 768px) {
     .carousel-bg {
-        min-height: 90vh;
-        min-height: 90dvh;
+        min-height: 100vh;
+        min-height: 100dvh;
     }
 }
 
