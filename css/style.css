@@ -549,23 +549,6 @@ body {
     transform: translateX(10px);
 }
 
-.service-icon {
-    flex-shrink: 0;
-    width: 45px;
-    height: 45px;
-    background: linear-gradient(135deg, #7db907 0%, #517705 100%);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.service-icon span {
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
 .service-text {
     flex: 1;
     font-size: 1.05rem;
@@ -605,12 +588,6 @@ body {
     .service-item {
         padding: 20px;
     }
-
-    .service-icon {
-        width: 40px;
-        height: 40px;
-    }
-
     .service-text {
         font-size: 1rem;
     }
