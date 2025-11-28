@@ -725,28 +725,30 @@ body {
 }
 
 .send-icon {
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     right: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: #7db907;
+    border: 2px solid rgba(0, 0, 0, 0.3);
     width: 50px;
     height: 50px;
-    display: flex;
+    display: none;     /* ✅ Hidden by default */
     align-items: center;
     justify-content: center;
     transform: rotate(-45deg);
     transition: all 0.3s ease;
     cursor: pointer;
+    z-index: 9999;     /* ✅ Stay on top */
 }
 
+
 .send-icon:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(35, 107, 7, 0.8);
     border-color: rgba(255, 255, 255, 0.5);
 }
 
 .send-icon i {
-    color: #ffffff;
+    color: #ffff;
     font-size: 20px;
 }
 
